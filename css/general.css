@@ -30,6 +30,41 @@ body {
   background-color: var(--beige);
 }
 
+/* fonts */
+h1 {
+  font-size: 2.5rem;
+  display: grid;
+  text-align: center;
+  font-family: "Bodoni Moda", serif;
+  padding: 50px;
+  padding-bottom: 200px;
+}
+
+h2 {
+  font-family: "Bodoni Moda", serif;
+  font-style: italic;
+}
+
+h3 {
+  font-family: "Poppins", serif;
+  font-weight: 400;
+}
+
+p {
+  font-family: "Poppins", serif;
+  font-weight: 300;
+}
+
+/********** HOVER EFFECTS **********/
+.grow {
+  transition: 1s ease;
+}
+
+.grow:hover {
+  transform: scale(1.1);
+  transition: 1s ease;
+}
+
 /* MENU */
 header {
   position: sticky;
