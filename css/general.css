@@ -46,14 +46,17 @@ h1 {
 h2 {
   font-family: "Bodoni Moda", serif;
   font-style: italic;
+  font-size: 2rem;
 }
 
 h3 {
   font-family: "Poppins", serif;
   font-weight: 400;
+  font-size: 1rem;
 }
 
-p {
+p,
+button {
   font-family: "Poppins", serif;
   font-weight: 300;
 }
