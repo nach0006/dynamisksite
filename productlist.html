@@ -7,56 +7,98 @@
     <title>Produktliste</title>
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/productlist.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
+    <a id="top"></a>
     <header>
-
+        <nav class="nav">
+            <ul class="menu">
+                <li><a href="index.html" aria-label="Go to Home page">home</a></li>
+                <li>
+                    <a href="#top" class="logo">
+                        <img src="img/logo.webp" alt="Logo">
+                    </a>
+                </li>
+                <li><a href="productlist.html" class="active" aria-label="Go to Productlist page">products</a></li>
+            </ul>
+            <div class="burger" id="burger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <span class="cross-icon">X</span>
+            </div>
+        </nav>
     </header>
     <main>
-        <section>
-            <h1>Nike</h1>
-            <div class="product_list_container">
-                <a class="product" href="product.html">
-                    <img id="1529" src="" alt="">
-                    <h3>Tee</h3>
-                    <p>
-                        1899kr,-
-                    </p>
-                </a>
-                <a class="product" href="product.html">
-                    <img id="1528" src="" alt="">
-                    <h3>Black Fleece Jacket</h3>
-                    <p>
-                        3999kr,- <br><br>
-                        discount: 49%
-                    </p>
-                </a>
-                <!-- <a class="product" href="product.html">
-                <img id="" src="" alt="">
-                <h3></h3>
-                <p>
-                   
-                </p>
-            </a> -->
-                <a class="product" href="product.html">
-                    <img id="1530" src="" alt="">
-                    <h3>Track Jacket</h3>
-                    <p>
-                        4299kr,-
-                        <br><br>
-                        discount: 57%
-                        <br><br>
-                        soldout:1
-                    </p>
-                </a>
+        <section id="Apparel">
+            <h1>Apparel</h1>
+            <div class="nike">
+                <h2>Nike</h2>
+                <div class="product_list_container">
+                    <a class="product" href="product.html">
+                        <img id="nike1" src="img/nike1.webp" alt="Nike shirt1">
+                        <h3>Sahara Team India Fanwear Round Neck Jersey</h3>
+                        <p>895kr,-</p>
+                    </a>
+                    <a class="product" href="product.html">
+                        <img id="nike2" src="img/nike2.webp" alt="Nike shirt2">
+                        <h3>Blue T20 Indian Cricket Jersey</h3>
+                        <p>Now: 1149kr,- (28%)</p>
+                        <p class="init_price">1595kr,-</p>
+                    </a>
+                    <a class="product" href="product.html">
+                        <div class="soldout">
+                            <img id="nike3" src="img/nike3.webp" alt="Nike shirt3">
+                            <h3>Mean Team India Cricket Jersey</h3>
+                            <p>Now: 1149kr,-</p>
+                            <p class="init_price">1595kr,-</p>
+                        </div>
+                        <p class="soldout_text">sold out</p>
+                    </a>
+                </div>
             </div>
+            <div>
+                <h2>Puma</h2>
+                <div class="product_list_container">
+                    <a class="product" href="product.html">
+                        <img id="puma1" src="img/puma1.webp" alt="Puma jacket1">
+                        <h3>Tee</h3>
+                        <p>1899kr,-</p>
+                    </a>
+                    <a class="product" href="product.html">
+                        <img id="puma2" src="img/puma2.webp" alt="Puma shirt">
+                        <div class="soldout">
+                            <h3>Track Jacket</h3>
+                            <p>Now: 1848,57kr,- (57%)</p>
+                            <p class="init_price">4299kr,-</p>
+                        </div>
+                        <p class="soldout_text">sold out</p>
+                    </a>
+                    <a class="product" href="product.html">
+                        <img id="puma3" src="img/puma3.webp" alt="Puma jacket2">
+                        <h3>Black Fleece Jacket</h3>
+                        <p>Now: 2039kr,- (49%)</p>
+                        <p class="init_price">3999kr,-</p>
+                    </a>
+                </div>
+            </div>
+
         </section>
+
 
     </main>
     <footer>
 
     </footer>
+
+    <script src="menu.js"></script>
 </body>
 
 </html>

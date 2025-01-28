@@ -1,6 +1,13 @@
 .product {
   text-decoration: none;
   color: black;
+  margin-bottom: 100px;
+  position: relative; /* necessary to center soldout_text in product container */
+  display: inline-block; /* "" in mobile screens */
+}
+
+img {
+  padding-bottom: 10px;
 }
 
 @media (min-width: 900px) {
@@ -9,4 +16,38 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
   }
+
+  .product {
+    border: 1px solid black;
+    /* (doesnt work on phone??!!) */
+    padding: 20px;
+    box-sizing: border-box;
+  }
+}
+
+.init_price {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.soldout {
+  opacity: 0.5;
+}
+
+.soldout_text {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  top: 40%;
+  left: 50%;
+  font-family: "Bodoni Moda", serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2rem;
+  background-color: var(--turquoise);
+  color: white;
+  padding: 7px;
 }
