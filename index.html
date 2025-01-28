@@ -7,33 +7,58 @@
     <title>Home</title>
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/index.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
+    <a id="top"></a>
     <header>
-
+        <nav class="nav">
+            <ul class="menu">
+                <li><a href="index.html" class="active" aria-label="Go to Home page">home</a></li>
+                <li>
+                    <a href="#top" class="logo">
+                        <img src="img/logo.webp" alt="Logo">
+                    </a>
+                </li>
+                <li><a href="productlist.html" aria-label="Go to Productlist page">products</a></li>
+            </ul>
+            <div class="burger" id="burger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <span class="cross-icon">X</span>
+            </div>
+        </nav>
     </header>
     <main>
         <section>
-            <h1>Categories</h1>
+            <h1>Welcome !!</h1>
+            <h2>Categories</h2>
             <div class="category_list_container">
-                <a class="category" href="productlist.html">
-                    <h2>Accessories</h2>
+                <a class="category grow" href="productlist.html">
+                    <h3>Accessories</h3>
                 </a>
-                <a class="category" href="productlist.html">
-                    <h2>Apparel</h2>
+                <a class="category grow" href="productlist.html">
+                    <h3>Apparel</h3>
                 </a>
-                <a class="category" href="productlist.html">
-                    <h2>Footwear</h2>
+                <a class="category grow" href="productlist.html">
+                    <h3>Footwear</h3>
                 </a>
-                <a class="category" href="productlist.html">
-                    <h2>Free items</h2>
+                <a class="category grow" href="productlist.html">
+                    <h3>Free items</h3>
                 </a>
-                <a class="category" href="productlist.html">
-                    <h2>Personal care</h2>
+                <a class="category grow" href="productlist.html">
+                    <h3>Personal care</h3>
                 </a>
-                <a class="category" href="productlist.html">
-                    <h2>Sporting goods</h2>
+                <a class="category grow" href="productlist.html">
+                    <h3>Sporting goods</h3>
                 </a>
             </div>
         </section>
@@ -41,6 +66,8 @@
     <footer>
 
     </footer>
+
+    <script src="menu.js"></script>
 </body>
 
 </html>

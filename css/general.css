@@ -4,6 +4,14 @@
   box-sizing: border-box;
 }
 
+/* colors */
+:root {
+  --beige: #f0f1ec;
+  --dark_beige: #e1dbcd;
+  --turquoise: #6e9594;
+  --black: #212622;
+}
+
 img {
   width: 100%;
   height: auto;
@@ -19,4 +27,163 @@ body {
   max-inline-size: 1200px;
   margin-inline: auto;
   padding: 0 3rem;
+  background-color: var(--beige);
+}
+
+/* fonts */
+h1 {
+  font-size: 2.5rem;
+  display: grid;
+  text-align: center;
+  font-family: "Bodoni Moda", serif;
+  padding: 50px;
+  padding-bottom: 200px;
+}
+
+h2 {
+  font-family: "Bodoni Moda", serif;
+  font-style: italic;
+}
+
+h3 {
+  font-family: "Poppins", serif;
+  font-weight: 400;
+}
+
+p {
+  font-family: "Poppins", serif;
+  font-weight: 300;
+}
+
+/********** HOVER EFFECTS **********/
+.grow {
+  transition: 1s ease;
+}
+
+.grow:hover {
+  transform: scale(1.1);
+  transition: 1s ease;
+}
+
+/* MENU */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid black;
+  padding: 10px;
+}
+
+.logo {
+  width: 145px;
+  height: 60px;
+  display: grid;
+}
+
+.nav {
+  position: relative;
+}
+
+.menu {
+  display: flex;
+  gap: 56px;
+  list-style: none;
+}
+
+.menu li {
+  position: relative;
+  align-content: center;
+  display: grid;
+}
+
+.menu a {
+  text-decoration: none;
+  color: var(--black);
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.menu a:hover {
+  font-family: "Bodoni Moda", serif;
+  font-size: 0.8rem;
+}
+
+.menu a.active {
+  color: var(--black);
+  text-decoration: underline;
+}
+
+/* BURGER MENU */
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.burger .line {
+  width: 25px;
+  height: 3px;
+  background-color: var(--black);
+}
+
+.burger .cross-icon {
+  display: none;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 24px;
+  color: var(--black);
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  header {
+    justify-content: end;
+    padding: 20px 0;
+  }
+
+  .menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: -50%; /* initially off-screen */
+    width: 50%;
+    height: 100%;
+    background-color: var(--turquoise);
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.6s ease-in-out;
+    padding-top: 40px;
+  }
+
+  .menu a {
+    color: white;
+  }
+
+  .menu.active a {
+    color: white;
+  }
+
+  .menu.active {
+    display: flex;
+    right: 0;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  .burger.active .cross-icon {
+    display: block; /* show cross */
+  }
+
+  .logo {
+    grid-row: 1;
+  }
 }

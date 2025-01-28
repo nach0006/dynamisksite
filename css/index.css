@@ -1,14 +1,21 @@
+main {
+  padding-top: 40px;
+}
+
 .category {
-  background-color: rgb(235, 233, 233);
-  color: black;
+  background-color: var(--turquoise);
+  opacity: 0.8;
+  color: white;
   text-decoration: none;
-  padding: 25px;
+  padding: 30px;
+  border-radius: 5px;
 }
 
 .category_list_container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10px;
+  gap: 20px;
+  padding-top: 10px;
 }
 
 @media (min-width: 900px) {
@@ -16,5 +23,9 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
+  }
+
+  h1 {
+    font-size: 4rem;
   }
 }
