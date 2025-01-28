@@ -1,0 +1,20 @@
+.category {
+  background-color: rgb(235, 233, 233);
+  color: black;
+  text-decoration: none;
+  padding: 25px;
+}
+
+.category_list_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+@media (min-width: 900px) {
+  .category_list_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+}
