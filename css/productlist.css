@@ -1,9 +1,9 @@
 .product {
+  display: grid;
+  position: relative; /* necessary to center soldout_text in product container */
   text-decoration: none;
   color: black;
   margin-bottom: 100px;
-  position: relative; /* necessary to center soldout_text in product container */
-  display: inline-block; /* "" in mobile screens */
 }
 
 img {

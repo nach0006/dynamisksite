@@ -46,14 +46,17 @@ h1 {
 h2 {
   font-family: "Bodoni Moda", serif;
   font-style: italic;
+  font-size: 2rem;
 }
 
 h3 {
   font-family: "Poppins", serif;
   font-weight: 400;
+  font-size: 1rem;
 }
 
-p {
+p,
+button {
   font-family: "Poppins", serif;
   font-weight: 300;
 }
@@ -64,7 +67,7 @@ p {
 }
 
 .grow:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   transition: 1s ease;
 }
 
@@ -102,15 +105,17 @@ header {
 }
 
 .menu a {
+  font-family: "Bodoni Moda", serif;
   text-decoration: none;
   color: var(--black);
   font-size: 1rem;
   text-transform: uppercase;
+  transition: 1s ease;
 }
 
 .menu a:hover {
-  font-family: "Bodoni Moda", serif;
-  font-size: 0.8rem;
+  font-size: 1.2rem;
+  transition: 1s ease;
 }
 
 .menu a.active {
@@ -129,14 +134,14 @@ header {
 .burger .line {
   width: 25px;
   height: 3px;
-  background-color: var(--black);
+  background-color: black;
 }
 
 .burger .cross-icon {
   display: none;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: 24px;
-  color: var(--black);
+  color: white;
   position: absolute;
   top: 0;
   right: 0;
@@ -184,9 +189,5 @@ header {
 
   .burger.active .cross-icon {
     display: block; /* show cross */
-  }
-
-  .logo {
-    grid-row: 1;
   }
 }

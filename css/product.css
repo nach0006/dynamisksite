@@ -1,0 +1,95 @@
+.product_container {
+  border: 1px solid black;
+  /* (doesnt work on phone??!!) */
+  padding: 30px;
+  margin-top: 30px;
+  position: relative;
+}
+
+.variable_container {
+  padding-bottom: 30px;
+}
+
+.brand_container {
+  padding-bottom: 50px;
+}
+
+.price {
+  font-size: 1.5rem;
+}
+
+.init_price {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.color_selector {
+  border: 1px solid black;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.size {
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
+  background-color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 16px;
+  border-radius: 0px;
+}
+
+.buy {
+  padding: 15px;
+  border: 1px solid var(--dark_beige);
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 16px;
+  border-radius: 0px;
+}
+
+.size:hover,
+.buy:hover {
+  background-color: var(--dark_beige);
+}
+
+@media (min-width: 900px) {
+  .product_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+}
+
+.soldout {
+  opacity: 0.5;
+}
+
+.soldout_text {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  top: 30%;
+  left: 50%;
+  font-family: "Bodoni Moda", serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 3rem;
+  background-color: var(--turquoise);
+  color: white;
+  padding: 7px;
+}
+
+@media (min-width: 900px) {
+  .soldout_text {
+    top: 50%;
+    left: 25%;
+  }
+}
