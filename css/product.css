@@ -3,6 +3,7 @@
   /* (doesnt work on phone??!!) */
   padding: 30px;
   margin-top: 30px;
+  position: relative;
 }
 
 .variable_container {
@@ -15,6 +16,11 @@
 
 .price {
   font-size: 1.5rem;
+}
+
+.init_price {
+  text-decoration: line-through;
+  opacity: 0.5;
 }
 
 .color_selector {
@@ -56,5 +62,34 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
+  }
+}
+
+.soldout {
+  opacity: 0.5;
+}
+
+.soldout_text {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  top: 30%;
+  left: 50%;
+  font-family: "Bodoni Moda", serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 3rem;
+  background-color: var(--turquoise);
+  color: white;
+  padding: 7px;
+}
+
+@media (min-width: 900px) {
+  .soldout_text {
+    top: 50%;
+    left: 25%;
   }
 }
