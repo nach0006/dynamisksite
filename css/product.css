@@ -23,13 +23,6 @@
   opacity: 0.5;
 }
 
-.color_selector {
-  border: 1px solid black;
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-}
-
 .size {
   width: 30px;
   height: 30px;
