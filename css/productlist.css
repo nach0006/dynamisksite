@@ -1,5 +1,7 @@
 .product {
   display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 4; /*number of max elements there are - number of rows*/
   position: relative; /* necessary to center soldout_text in product container */
   text-decoration: none;
   color: black;
