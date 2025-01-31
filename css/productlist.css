@@ -23,7 +23,6 @@ img {
 
   .product {
     border: 1px solid black;
-    /* (doesnt work on phone??!!) */
     padding: 20px;
     box-sizing: border-box;
   }
