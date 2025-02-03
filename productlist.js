@@ -1,7 +1,12 @@
-const category = "Apparel";
-let listContainer = document.querySelector(".product_list_container"); //main with class .productContainer without anything in
+const myCategory = new URLSearchParams(window.location.search).get("category");
+console.log("productlist loads... with category", myCategory);
 
-fetch(`https://kea-alt-del.dk/t7/api/products/`) // sender en GET-anmodning (forespørgsel til serveren)
+let listContainer = document.querySelector(".product_list_container"); //main with class .productContainer without anything in
+const overskrift = document.querySelector("h2");
+
+overskrift.innerHTML = myCategory; //udskrive category´s name
+
+fetch(`https://kea-alt-del.dk/t7/api/products/?category=${myCategory}`) // sender en GET-anmodning (forespørgsel til serveren)
   .then((response) => response.json()) // konverterer responsen til JSON (JavaScriipt objekt)
   .then((data) => showList(data)); //henter data
 
