@@ -1,12 +1,13 @@
-let productId = 1163;
 let productContainer = document.querySelector(".product_container"); //main with class .productContainer without anything in
 
-fetch(`https://kea-alt-del.dk/t7/api/products/${productId}`) // Sender en GET-anmodning (forespørgsel til serveren)
+const myProduct = new URLSearchParams(window.location.search).get("id");
+
+fetch(`https://kea-alt-del.dk/t7/api/products/${myProduct}`) // Sender en GET-anmodning (forespørgsel til serveren)
   .then((response) => response.json()) // Konverterer responsen til JSON (JavaScriipt objekt)
   .then((data) => {
     //Udskriver dataen
     productContainer.innerHTML = `
-    <img src="img/nike1.webp" alt="Nike shirt1">
+        <img src="https://kea-alt-del.dk/t7/images/webp/640/${myProduct}.webp" alt="${myProduct}">
             <div class="info">
                 <h2 class="productName">${data.productdisplayname}</h2>
                 <div class="variable_container">

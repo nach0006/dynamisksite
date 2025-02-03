@@ -17,7 +17,7 @@ function showList(products) {
     .map(
       (product) =>
         //for each product... and copy a product´s html and change the data (in img - link to the images link!!!)
-        `<a class="product" href="products.html">
+        `<a class="product" href="products.html?id=${product.id}">
                         <img src="https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp" alt="${product.id}"> 
                         <h3>${product.productdisplayname}</h3>
                         <p>${product.price}kr</p>
