@@ -1,11 +1,13 @@
-let productContainer = document.querySelector(".product_container"); //main with class .productContainer without anything in
+// select container where product details will be displayed
+let productContainer = document.querySelector(".product_container");
 
+// get product ID from URL query parameter
 const myProduct = new URLSearchParams(window.location.search).get("id");
 
-fetch(`https://kea-alt-del.dk/t7/api/products/${myProduct}`) // Sender en GET-anmodning (forespørgsel til serveren)
-  .then((response) => response.json()) // Konverterer responsen til JSON (JavaScriipt objekt)
+fetch(`https://kea-alt-del.dk/t7/api/products/${myProduct}`) // request to get data (product details) of selected product
+  .then((response) => response.json()) // convert response to JSON
   .then((data) => {
-    //Udskriver dataen
+    // display product details dynamically
     productContainer.innerHTML = `
         <img src="https://kea-alt-del.dk/t7/images/webp/640/${myProduct}.webp" alt="${myProduct}">
             <div class="info">
