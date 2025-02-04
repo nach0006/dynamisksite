@@ -14,6 +14,10 @@
   padding-bottom: 50px;
 }
 
+.not_visible {
+  visibility: hidden;
+}
+
 .price {
   font-size: 1.5rem;
 }
@@ -21,6 +25,11 @@
 .init_price {
   text-decoration: line-through;
   opacity: 0.5;
+}
+
+.new_price {
+  visibility: visible;
+  font-size: 2rem;
 }
 
 .size {
@@ -45,9 +54,12 @@
   border-radius: 0px;
 }
 
-.size:hover,
-.buy:hover {
+.size:hover {
   background-color: var(--dark_beige);
+}
+
+.buy:hover {
+  background-color: var(--turquoise);
 }
 
 @media (min-width: 900px) {
@@ -58,23 +70,45 @@
   }
 }
 
+.discount {
+  visibility: visible;
+  position: absolute;
+  top: 19px;
+  right: 20px;
+  font-weight: bold;
+  font-size: 3rem;
+  background-color: #6e9594;
+  color: white;
+  font-family: "Bodoni Moda", serif;
+  text-transform: uppercase;
+}
+
+@media (min-width: 900px) {
+  .discount {
+    font-size: 4rem;
+    top: 609px;
+    right: 27px;
+  }
+}
+
 .soldout {
   opacity: 0.5;
 }
 
 .soldout_text {
+  visibility: visible;
   position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   transform: translate(-50%, -50%);
-  top: 30%;
+  top: 32%;
   left: 50%;
   font-family: "Bodoni Moda", serif;
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 3rem;
+  font-size: 2rem;
   background-color: var(--turquoise);
   color: white;
   padding: 7px;
