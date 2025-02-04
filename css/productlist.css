@@ -1,7 +1,7 @@
 .product {
   display: grid;
   grid-template-rows: subgrid;
-  grid-row: span 4; /*number of max elements there are - number of rows*/
+  grid-row: span 5; /*number of max elements there are - number of rows*/
   position: relative; /* necessary to center soldout_text in product container */
   text-decoration: none;
   color: black;
@@ -28,9 +28,42 @@ img {
   }
 }
 
+.not_visible {
+  visibility: hidden;
+}
+
+.price {
+  font-size: 1.5rem;
+}
+
 .init_price {
   text-decoration: line-through;
   opacity: 0.5;
+}
+
+.new_price {
+  visibility: visible;
+  font-size: 2rem;
+}
+
+.discount {
+  visibility: visible;
+  position: absolute;
+  top: 19px;
+  right: 20px;
+  font-weight: bold;
+  font-size: 2.5rem;
+  background-color: #6e9594;
+  color: white;
+  font-family: "Bodoni Moda", serif;
+  text-transform: uppercase;
+}
+
+@media (min-width: 900px) {
+  .discount {
+    top: 508px;
+    right: 12px;
+  }
 }
 
 .soldout {
@@ -38,6 +71,7 @@ img {
 }
 
 .soldout_text {
+  visibility: visible;
   position: absolute;
   display: flex;
   justify-content: center;
