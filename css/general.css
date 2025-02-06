@@ -61,7 +61,7 @@ button {
   font-weight: 300;
 }
 
-/********** HOVER EFFECTS **********/
+/* HOVER EFFECTS */
 .grow {
   transition: 1s ease;
 }
@@ -190,4 +190,55 @@ header {
   .burger.active .cross-icon {
     display: block; /* show cross */
   }
+}
+
+/* PRICE */
+.not_visible {
+  visibility: hidden;
+}
+
+.price {
+  font-size: 1.5rem;
+}
+
+.init_price {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.new_price {
+  visibility: visible;
+  font-size: 2rem;
+}
+
+/* DISCOUNT AND SOLD OUT  */
+.discount {
+  visibility: visible;
+  position: absolute;
+  font-weight: bold;
+  background-color: #6e9594;
+  color: white;
+  font-family: "Bodoni Moda", serif;
+  text-transform: uppercase;
+}
+
+.soldout {
+  opacity: 0.5;
+}
+
+.soldout_text {
+  visibility: visible;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  font-family: "Bodoni Moda", serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2rem;
+  background-color: var(--turquoise);
+  color: white;
+  padding: 7px;
 }

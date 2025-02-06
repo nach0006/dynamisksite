@@ -28,35 +28,10 @@ img {
   }
 }
 
-.not_visible {
-  visibility: hidden;
-}
-
-.price {
-  font-size: 1.5rem;
-}
-
-.init_price {
-  text-decoration: line-through;
-  opacity: 0.5;
-}
-
-.new_price {
-  visibility: visible;
-  font-size: 2rem;
-}
-
 .discount {
-  visibility: visible;
-  position: absolute;
   top: 19px;
   right: 20px;
-  font-weight: bold;
   font-size: 2.5rem;
-  background-color: #6e9594;
-  color: white;
-  font-family: "Bodoni Moda", serif;
-  text-transform: uppercase;
 }
 
 @media (min-width: 900px) {
@@ -71,20 +46,7 @@ img {
 }
 
 .soldout_text {
-  visibility: visible;
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  transform: translate(-50%, -50%);
   top: 40%;
   left: 50%;
-  font-family: "Bodoni Moda", serif;
-  text-transform: uppercase;
-  font-weight: bold;
   font-size: 2rem;
-  background-color: var(--turquoise);
-  color: white;
-  padding: 7px;
 }
