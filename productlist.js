@@ -7,7 +7,7 @@ const filterSelect = document.querySelector("#filter"); // Select filter dropdow
 
 overskrift.innerHTML = myCategory; //display category name
 
-fetch(`https://kea-alt-del.dk/t7/api/products/?category=${myCategory}`) // request to get data (all products) in selected category
+fetch(`https://kea-alt-del.dk/t7/api/products/?limit=18&category=${myCategory}`) // request to get data (all products) in selected category
   .then((response) => response.json()) // convert response to JSON (JS object)
   //downloads data - call function to display products
   .then((products) => {
