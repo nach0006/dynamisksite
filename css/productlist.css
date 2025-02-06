@@ -1,7 +1,7 @@
 .product {
   display: grid;
   grid-template-rows: subgrid;
-  grid-row: span 4; /*number of max elements there are - number of rows*/
+  grid-row: span 6; /*number of max elements there are - number of rows*/
   position: relative; /* necessary to center soldout_text in product container */
   text-decoration: none;
   color: black;
@@ -28,9 +28,10 @@ img {
   }
 }
 
-.init_price {
-  text-decoration: line-through;
-  opacity: 0.5;
+.discount {
+  bottom: 19px;
+  right: 20px;
+  font-size: 2.5rem;
 }
 
 .soldout {
@@ -38,19 +39,7 @@ img {
 }
 
 .soldout_text {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  transform: translate(-50%, -50%);
   top: 40%;
   left: 50%;
-  font-family: "Bodoni Moda", serif;
-  text-transform: uppercase;
-  font-weight: bold;
   font-size: 2rem;
-  background-color: var(--turquoise);
-  color: white;
-  padding: 7px;
 }

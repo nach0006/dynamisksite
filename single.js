@@ -10,10 +10,12 @@ fetch(`https://kea-alt-del.dk/t7/api/products/${myProduct}`) // request to get d
     // display product details dynamically
     productContainer.innerHTML = `
         <img src="https://kea-alt-del.dk/t7/images/webp/640/${myProduct}.webp" alt="${myProduct}">
-            <div class="info">
+            <div class="info ${data.soldout && "soldout"}">
                 <h2 class="productName">${data.productdisplayname}</h2>
                 <div class="variable_container">
-                    <p class="price">${data.price}kr</p>
+                    <p class="${data.discount && "init_price"}">${data.price}kr</p>
+                    <p class="not_visible ${data.discount && "new_price"}">${data.discount && Math.round(data.price * (1 - data.discount / 100)) + " kr"}</p>
+                    <p class="not_visible ${data.discount && "discount"}">(${data.discount}%)</p>
                 </div>
                 <div class="variable_container">
                     <h3>Size</h3>
@@ -35,5 +37,6 @@ fetch(`https://kea-alt-del.dk/t7/api/products/${myProduct}`) // request to get d
                 <div class="buy_button">
                     <button class="buy">Add to basket</button>
                 </div>
+                <p class="not_visible ${data.soldout && "soldout_text"}">soldout</p>
             </div>`;
   });

@@ -18,11 +18,14 @@ function showList(products) {
     .map(
       (product) =>
         //add copy a product´s html and change the data to dynamisk: product.(what u want to fetch)
-        `<a class="product" href="products.html?id=${product.id}">
-                        <img src="https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp" alt="${product.id}"> 
-                        <h3>${product.productdisplayname}</h3>
-                        <p>${product.price}kr</p>
-                    </a>`
+        `<a class="product ${product.soldout && "soldout"}" href="products.html?id=${product.id}">
+                    <img src="https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp" alt="${product.id}">
+                    <h3>${product.productdisplayname}</h3>
+                    <p class="${product.discount && "init_price"}">${product.price}kr</p>
+                    <p class="not_visible ${product.discount && "new_price"}">${product.discount && Math.round(product.price * (1 - product.discount / 100)) + " kr"}</p>
+                    <p class="not_visible ${product.discount && "discount"}">(${product.discount}%)</p>
+                    <p class="not_visible ${product.soldout && "soldout_text"}">soldout</p>
+                </a>`
     )
     .join(""); // join array elements into a single string
   console.log("markup er nu ", markup);
