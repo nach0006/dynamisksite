@@ -20,13 +20,26 @@
     <header>
         <nav class="nav">
             <ul class="menu">
-                <li><a href="index.html" aria-label="Go to Home page">home</a></li>
+                <li><a href="index.html" aria-label="Go to Home page">HOME</a></li>
                 <li>
                     <a href="index.html#top" class="logo">
                         <img src="img/logo.webp" alt="Logo">
                     </a>
                 </li>
-                <li><a href="productlist.html" class="active" aria-label="Go to Productlist page">products</a></li>
+                <li class="menu-item">
+                    <a href="#" class="active" id="products-link" aria-label="Go to Productlist page">PRODUCTS</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="productlist.html?category=Accessories" aria-label="Accessories">accessories</a>
+                        </li>
+                        <li><a href="productlist.html?category=Apparel" aria-label="Apparel">apparel</a></li>
+                        <li><a href="productlist.html?category=Footwear" aria-label="Footwear">footwear</a></li>
+                        <li><a href="productlist.html?category=Free Items" aria-label="Free Items">free items</a></li>
+                        <li><a href="productlist.html?category=Personal Care" aria-label="Personal Care">personal
+                                care</a></li>
+                        <li><a href="productlist.html?category=Sporting Goods" aria-label="Sporting Goods">sporting
+                                goods</a></li>
+                    </ul>
+                </li>
             </ul>
             <div class="burger" id="burger">
                 <div class="line"></div>

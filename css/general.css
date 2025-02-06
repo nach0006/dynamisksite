@@ -109,7 +109,6 @@ header {
   text-decoration: none;
   color: var(--black);
   font-size: 1rem;
-  text-transform: uppercase;
   transition: 1s ease;
 }
 
@@ -121,6 +120,43 @@ header {
 .menu a.active {
   color: var(--black);
   text-decoration: underline;
+}
+
+/* DROPDOWN */
+/*initially hide it*/
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: var(--beige);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  min-width: 160px;
+  z-index: 1000;
+  padding: 10px 0;
+}
+
+.dropdown-menu li {
+  padding: 8px 16px;
+  list-style: none;
+}
+
+.dropdown-menu li a {
+  text-decoration: none;
+  color: black;
+  font-size: 1rem;
+}
+
+.dropdown-menu li a:hover {
+  background-color: var(--turquoise);
+  color: white;
+}
+
+.menu-item {
+  position: relative;
+}
+
+/* when menu active (open), show dropdown */
+.menu-item.active .dropdown-menu {
+  display: block; /* show dropdown when active */
 }
 
 /* BURGER MENU */
@@ -170,12 +206,8 @@ header {
     padding-top: 40px;
   }
 
-  .menu a {
-    color: white;
-  }
-
   .menu.active a {
-    color: white;
+    color: black;
   }
 
   .menu.active {
@@ -189,6 +221,19 @@ header {
 
   .burger.active .cross-icon {
     display: block; /* show cross */
+  }
+
+  .menu-item .dropdown-menu {
+    position: static;
+  }
+
+  .dropdown-menu a {
+    color: black;
+  }
+
+  .home,
+  .products {
+    color: white;
   }
 }
 
