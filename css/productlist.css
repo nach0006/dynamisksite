@@ -43,3 +43,8 @@ img {
   left: 50%;
   font-size: 2rem;
 }
+
+#filter {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

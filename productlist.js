@@ -3,14 +3,37 @@ console.log("productlist loads... with category", myCategory);
 
 let listContainer = document.querySelector(".product_list_container"); //select container where products will be displayed (html container without info inside)
 const overskrift = document.querySelector("h2");
+const filterSelect = document.querySelector("#filter"); // Select filter dropdown
 
 overskrift.innerHTML = myCategory; //display category name
 
-fetch(`https://kea-alt-del.dk/t7/api/products/?category=${myCategory}`) // request to get data (all products) in selected category
+fetch(`https://kea-alt-del.dk/t7/api/products/?limit=18&category=${myCategory}`) // request to get data (all products) in selected category
   .then((response) => response.json()) // convert response to JSON (JS object)
-  .then((data) => showList(data)); //downloads data - call function to display products
+  //downloads data - call function to display products
+  .then((products) => {
+    showList(products); // show all products initially
 
-//
+    // listen for filter changes
+    filterSelect.addEventListener("change", () => {
+      applyFilter(products);
+    });
+  });
+
+// function to filter products based on user selection
+function applyFilter(products) {
+  const filterValue = filterSelect.value;
+  let filteredProducts = products;
+
+  if (filterValue === "onsale") {
+    filteredProducts = products.filter((product) => product.discount);
+  } else if (filterValue === "instock") {
+    filteredProducts = products.filter((product) => product.soldout);
+  }
+
+  showList(filteredProducts); // update UI with filtered products
+}
+
+// function to display products
 function showList(products) {
   console.log(products);
   // create HTML for each product
