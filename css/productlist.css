@@ -1,7 +1,7 @@
 .product {
   display: grid;
   grid-template-rows: subgrid;
-  grid-row: span 5; /*number of max elements there are - number of rows*/
+  grid-row: span 6; /*number of max elements there are - number of rows*/
   position: relative; /* necessary to center soldout_text in product container */
   text-decoration: none;
   color: black;
@@ -29,16 +29,9 @@ img {
 }
 
 .discount {
-  top: 19px;
+  bottom: 19px;
   right: 20px;
   font-size: 2.5rem;
-}
-
-@media (min-width: 900px) {
-  .discount {
-    top: 508px;
-    right: 12px;
-  }
 }
 
 .soldout {

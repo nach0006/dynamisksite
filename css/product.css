@@ -53,16 +53,16 @@
 
 /* position-size DISCOUNT AND SOLD OUT */
 .discount {
-  top: 19px;
+  bottom: 400px;
   right: 20px;
   font-size: 3rem;
 }
 
 @media (min-width: 900px) {
   .discount {
+    bottom: 19px;
+    right: 20px;
     font-size: 4rem;
-    top: 609px;
-    right: 27px;
   }
 }
 
